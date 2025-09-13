@@ -1189,14 +1189,7 @@ header .container {
     }
 }
 
-.gallery-item {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    height: 250px;
-    position: relative;
-    cursor: pointer;
-}
-
+/* ===== GALLERY SECTION ===== */
 .gallery-item {
     border-radius: var(--border-radius);
     overflow: hidden;
