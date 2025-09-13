@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gelato House Website
 
 A responsive website for Gelato House, an ice cream shop featuring authentic Italian gelato. This website is designed to work seamlessly on both desktop and mobile devices, with a luxurious brown and gold color scheme.
@@ -126,3 +127,6 @@ Potential future enhancements for the website:
 ---
 
 © 2025 Gelato House | Created by GitHub Copilot
+=======
+# Gelato-house
+>>>>>>> 65f61f64aa1b915bd8e2f233cec427607d7377d6
