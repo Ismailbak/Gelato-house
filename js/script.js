@@ -31,23 +31,66 @@ function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const leftMenu = document.querySelector('.left-menu');
     const rightMenu = document.querySelector('.right-menu');
+    const navbar = document.getElementById('navbar');
+    const overlay = document.getElementById('menu-overlay');
 
-    if (mobileMenuBtn && leftMenu && rightMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+    if (mobileMenuBtn && leftMenu && rightMenu && overlay) {
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = mobileMenuBtn.classList.contains('active');
+            
             mobileMenuBtn.classList.toggle('active');
             leftMenu.classList.toggle('active');
             rightMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+            closeMenu();
         });
 
         // Close menu when clicking a nav link
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenuBtn.classList.remove('active');
-                leftMenu.classList.remove('active');
-                rightMenu.classList.remove('active');
+                closeMenu();
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navbar.contains(e.target) && 
+                (leftMenu.classList.contains('active') || rightMenu.classList.contains('active'))) {
+                closeMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && 
+                (leftMenu.classList.contains('active') || rightMenu.classList.contains('active'))) {
+                closeMenu();
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        // Function to close menu
+        function closeMenu() {
+            mobileMenuBtn.classList.remove('active');
+            leftMenu.classList.remove('active');
+            rightMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
     }
 }
 

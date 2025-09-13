@@ -26,8 +26,8 @@ window.addEventListener('load', function() {
         }
         
         // Test WhatsApp number
-        if (window.cart && window.cart.whatsappNumber === '+212649511492') {
-            console.log('✅ WhatsApp number configured correctly: +212649511492');
+        if (window.cart && window.cart.whatsappNumber === '+212717034039') {
+            console.log('✅ WhatsApp number configured correctly: +212717034039');
         }
         
     }, 2000);

@@ -12,7 +12,7 @@ A modern, fully-featured website for Gelato House featuring authentic Italian ge
 - **Live Updates**: Real-time total calculation
 - **Checkout Process**: Customer details form
 - **Order Types**: Pickup (In House) or Delivery
-- **WhatsApp Integration**: Orders sent automatically to `+212649511492`
+- **WhatsApp Integration**: Orders sent automatically to `+212717034039`
 
 ### 📱 **Instagram Integration**
 - **Live Feed**: Automatically displays latest posts from `@gelato_house__`
@@ -74,7 +74,7 @@ cd Gelato-house
 ```
 
 ### 2. **Configuration**
-- **WhatsApp Number**: Already configured to `+212649511492`
+- **WhatsApp Number**: Already configured to `+212717034039`
 - **Instagram Feed**: Connected to `@gelato_house__` via SociableKit
 - **Logo**: Update `img/logo.jpg` with your logo
 
@@ -95,7 +95,7 @@ cd Gelato-house
 ### Order Process:
 1. Customer fills checkout form
 2. System generates formatted WhatsApp message
-3. Message sent to `+212649511492` with:
+3. Message sent to `+212717034039` with:
    - Customer name and phone
    - Order type (pickup/delivery)
    - Delivery address (if applicable)
@@ -159,7 +159,7 @@ Update contact details in the Contact section of `index.html`
 ### Cart Not Working:
 1. Check browser console (F12) for JavaScript errors
 2. Ensure all JS files are loading correctly
-3. Verify WhatsApp number format: `+212649511492`
+3. Verify WhatsApp number format: `+212717034039`
 
 ### Instagram Feed Not Loading:
 1. Check internet connection
@@ -176,7 +176,7 @@ Update contact details in the Contact section of `index.html`
 | Feature | Status | Description |
 |---------|--------|-------------|
 | Shopping Cart | ✅ Active | Full e-commerce functionality |
-| WhatsApp Orders | ✅ Active | Auto-send to +212649511492 |
+| WhatsApp Orders | ✅ Active | Auto-send to +212717034039 |
 | Instagram Feed | ✅ Active | Live @gelato_house__ posts |
 | Mobile Design | ✅ Active | Responsive on all devices |
 | Menu Categories | ✅ Active | 7 different categories |
@@ -204,7 +204,7 @@ Update contact details in the Contact section of `index.html`
 
 For technical support or customization requests:
 - **Instagram**: @gelato_house__
-- **WhatsApp**: +212649511492
+- **WhatsApp**: +212717034039
 - **GitHub**: [Issues Page](https://github.com/Ismailbak/Gelato-house/issues)
 
 ## 📄 License

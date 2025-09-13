@@ -7,7 +7,7 @@ class Cart {
     constructor() {
         this.items = [];
         this.total = 0;
-        this.whatsappNumber = '+212649511492';
+        this.whatsappNumber = '+212717034039';
         this.init();
     }
 
