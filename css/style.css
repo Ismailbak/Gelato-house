@@ -796,8 +796,8 @@ body.menu-open {
     background: var(--secondary-color);
     border: none;
     color: white;
-    width: 35px;
-    height: 35px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1346,11 +1346,8 @@ body.menu-open {
         top: 5px;
         right: 5px;
         /* Better touch targets */
-        min-width: 44px;
-        min-height: 44px;
-        /* Always visible on mobile */
-        opacity: 1 !important;
-        transform: translateY(0) !important;
+        min-width: 10px;
+        min-height: 10px;
     }
 }
 
