@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelato House - Delicious Italian Gelato | Tetouan</title>
+    
+    <!-- Favicon - Your Circular Logo -->
+    <link rel="icon" type="image/png" href="img/favicon-circular.png">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-circular.png">
+    <link rel="apple-touch-icon" href="img/favicon-circular.png">
+    <link rel="icon" type="image/png" href="img/favicon-circular.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-circular.png" sizes="16x16">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero-bg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="navbar">
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu left-menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#special-offers">SPECIAL OFFERS</a></li>
+                </ul>
+                <div class="logo-center">
+                    <a href="index.html">
+                        <img src="img/logo.jpg" alt="Gelato House Logo" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-menu right-menu">
+                    <li><a href="#menu">OUR MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li>
+                        <button id="cart-btn" class="cart-button">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Mobile menu overlay -->
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </div>
+    </header>
+
+    <section id="home" class="hero" style="background-color: #3A2718; position: relative;">
+        <!-- Background image container -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('img/custard-cream-bg.jpg'); background-size: cover; background-position: center; opacity: 0.7; z-index: 0;"></div>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeIn">
+                <div class="hero-title">
+                    <h2>Authentic Italian <span class="highlight">Gelato</span></h2>
+                </div>
+                <p>Handcrafted with love using traditional recipes and the finest ingredients</p>
+                <a href="#menu" class="btn btn-hero">Explore Our Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Gelato House</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/about.png" alt="Gelato preparation" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>Our Passion for Gelato</h3>
+                    <p>At Gelato House, we're dedicated to bringing the authentic taste of Italian gelato to your neighborhood. Our journey began with a simple passion for creating the perfect gelato - creamy, flavorful, and made with the highest quality ingredients.</p>
+                    <p>Each batch of our gelato is handcrafted daily in our kitchen, using traditional Italian methods passed down through generations. We source local, organic ingredients whenever possible and never use artificial preservatives.</p>
+                    <p>What makes our gelato special? It's not just the lower fat content than regular ice cream, but also the way we churn it slowly to create that perfect, smooth texture that melts in your mouth.</p>
+                    <a href="#menu" class="btn btn-secondary">Discover Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Delightful Menu</h2>
+                <div class="divider"></div>
+                <p>Explore our delicious treats and signature creations</p>
+            </div>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="crepes">Crepes</button>
+                <button class="category-btn" data-category="crepes-gelato-house">Crêpes Gelato House</button>
+                <button class="category-btn" data-category="gauffres">Gauffres</button>
+                <button class="category-btn" data-category="pancakes">Pancakes</button>
+                <button class="category-btn" data-category="boissons">Boissons</button>
+                <button class="category-btn" data-category="dubai-specialty">Dubai Specialty</button>
+                <button class="category-btn" data-category="tartes-glacees">Tartes Glacées</button>
+                <button class="category-btn" data-category="patisserie">Patisserie</button>
+            </div>
+            <div class="menu-grid">
+                <!-- Crepes -->
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">20dh</div>
+                    <h3>Crêpe Nutella</h3>
+                    <p>Crêpe filled with Nutella chocolate spread.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe Nutella" data-price="15">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <!-- Crepes Gelato House -->
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">40 dh</div>
+                    <h3>Crêpe dubai</h3>
+                    <p>Kunafa, sauce pistache.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe dubai" data-price="38">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">40 dh</div>
+                    <h3>Crêpe pistache</h3>
+                    <p>La sauce pistache.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe pistache" data-price="38">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">35 dh</div>
+                    <h3>Crêpe kinder bueno</h3>
+                    <p>La sauce kinder/kinder.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe kinder bueno" data-price="35">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">35 dh</div>
+                    <h3>Crêpe lotus</h3>
+                    <p>La sauce lotus/lotus.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe lotus" data-price="35">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">35 dh</div>
+                    <h3>Crêpe fruits secs</h3>
+                    <p>Pistache, noisette, amandes.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe fruits secs" data-price="35">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item" data-category="crepes-gelato-house">
+                    <div class="price-tag">40 dh</div>
+                    <h3>Crêpe fruits</h3>
+                    <p>Banana, ananas, kiwi, frais.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe fruits" data-price="40">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Amandes</h3>
+                    <p>Crêpe topped with roasted almonds.</p>
+                    <button class="add-to-cart-btn" data-name="Crêpe Amandes" data-price="20">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Noisettes</h3>
+                    <p>Crêpe with hazelnut spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Crêpe Pistache</h3>
+                    <p>Crêpe with pistachio cream.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Oreo</h3>
+                    <p>Crêpe with crushed Oreo cookies.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Crêpe KitKat</h3>
+                    <p>Crêpe with KitKat pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Crêpe M&Ms</h3>
+                    <p>Crêpe with M&Ms candy.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Kinder Bueno</h3>
+                    <p>Crêpe with Kinder Bueno filling.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Crêpe Snickers</h3>
+                    <p>Crêpe with Snickers pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Crêpe Lotus</h3>
+                    <p>Crêpe with Lotus Biscoff spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Fraises</h3>
+                    <p>Crêpe with fresh strawberries.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="crepes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Crêpe Bananes</h3>
+                    <p>Crêpe with fresh bananas.</p>
+                </div>
+                <!-- Gauffres -->
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">20dh</div>
+                    <h3>Gaufre Nutella</h3>
+                    <p>Belgian waffle with Nutella spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">25dh</div>
+                    <h3>Gaufre Amandes</h3>
+                    <p>Waffle topped with roasted almonds.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">25dh</div>
+                    <h3>Gaufre Noisettes</h3>
+                    <p>Waffle with hazelnut spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre Pistache</h3>
+                    <p>Waffle with pistachio cream.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">25dh</div>
+                    <h3>Gaufre Oreo</h3>
+                    <p>Waffle with crushed Oreo cookies.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre KitKat</h3>
+                    <p>Waffle with KitKat pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre M&Ms</h3>
+                    <p>Waffle with M&Ms candy.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre Kinder Bueno</h3>
+                    <p>Waffle with Kinder Bueno filling.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre Snickers</h3>
+                    <p>Waffle with Snickers pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">28dh</div>
+                    <h3>Gaufre Lotus</h3>
+                    <p>Waffle with Lotus Biscoff spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">25dh</div>
+                    <h3>Gaufre Fraises</h3>
+                    <p>Waffle with fresh strawberries.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="gauffres">
+                    <div class="price-tag">25dh</div>
+                    <h3>Gaufre Bananes</h3>
+                    <p>Waffle with fresh bananas.</p>
+                </div>
+                <!-- Pancakes -->
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">20dh</div>
+                    <h3>Pancake Nutella</h3>
+                    <p>Pancake with Nutella chocolate spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Pancake Amandes</h3>
+                    <p>Pancake topped with roasted almonds.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Pancake Noisettes</h3>
+                    <p>Pancake with hazelnut spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake Pistache</h3>
+                    <p>Pancake with pistachio cream.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake Oreo</h3>
+                    <p>Pancake with crushed Oreo cookies.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake KitKat</h3>
+                    <p>Pancake with KitKat pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake M&Ms</h3>
+                    <p>Pancake with M&Ms candy.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake Kinder Bueno</h3>
+                    <p>Pancake with Kinder Bueno filling.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake Snickers</h3>
+                    <p>Pancake with Snickers pieces.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">28dh</div>
+                    <h3>Pancake Lotus</h3>
+                    <p>Pancake with Lotus Biscoff spread.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Pancake Fraises</h3>
+                    <p>Pancake with fresh strawberries.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="pancakes">
+                    <div class="price-tag">25dh</div>
+                    <h3>Pancake Bananes</h3>
+                    <p>Pancake with fresh bananas.</p>
+                </div>
+                <!-- Dubai Specialty -->
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">40dh</div>
+                    <h3>Chocolate Dubai</h3>
+                    <p>Chocolate dessert with pistachio and kunafa, topped with pistachio cream.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">38dh</div>
+                    <h3>Crêpe Dubai</h3>
+                    <p>Crêpe filled with kunafa and pistachio sauce.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">60dh</div>
+                    <h3>Big Dubai Cake</h3>
+                    <p>Large chocolate cake layered with pistachio kunafa and melted chocolate.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">30dh</div>
+                    <h3>Small Dubai Cake</h3>
+                    <p>Small chocolate cake layered with pistachio kunafa and melted chocolate.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">30dh</div>
+                    <h3>Dubai Strawberry Cup</h3>
+                    <p>Cup with strawberry, chocolate, and kunafa pistachio.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="dubai-specialty">
+                    <div class="price-tag">50dh</div>
+                    <h3>Dream Cup</h3>
+                    <p>Chocolate cup filled with crackers, ice cream, and kunafa with pistachios.</p>
+                </div>
+                <!-- Tartes Glacées -->
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">249dh</div>
+                    <h3>Tarte Glacée Pistache</h3>
+                    <p>Rich pistachio ice cream tart.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">249dh</div>
+                    <h3>Tarte Glacée Chocolat Dubai</h3>
+                    <p>Chocolate Dubai-style ice cream tart.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">200dh</div>
+                    <h3>Tarte Glacée Lotus Kinder</h3>
+                    <p>Lotus and Kinder layered ice cream tart.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">190dh</div>
+                    <h3>Tarte Glacée Oreo Kinder</h3>
+                    <p>Oreo and Kinder ice cream tart.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">150dh</div>
+                    <h3>Tarte Glacée Chocolat Vanille</h3>
+                    <p>Chocolate and vanilla ice cream tart.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="tartes-glacees">
+                    <div class="price-tag">150dh</div>
+                    <h3>Tarte Glacée Citron Fraise</h3>
+                    <p>Lemon and strawberry ice cream tart.</p>
+                </div>
+                <!-- Patisserie -->
+                <div class="menu-item category-visible" data-category="patisserie">
+                    <div class="price-tag">220dh/1kg</div>
+                    <h3>Cake Design</h3>
+                    <p>Custom designed cake, perfect for celebrations.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="patisserie">
+                    <div class="price-tag">180dh/1kg</div>
+                    <h3>Tarte Normale</h3>
+                    <p>Classic tart, available in various flavors.</p>
+                </div>
+                <!-- Boissons Chaudes -->
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">8dh</div>
+                    <h3>Cafe noir</h3>
+                    <p>Strong and aromatic Italian coffee.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">11dh</div>
+                    <h3>Café au Lait</h3>
+                    <p>Coffee with steamed milk.</p>
+                </div>
+                 <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">12dh</div>
+                    <h3>Cappuccino</h3>
+                    <p>Espresso with steamed milk foam.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">15dh</div>
+                    <h3>Cappuccino Viennoise</h3>
+                    <p>Espresso with steamed milk foam.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Chocolat Chaud</h3>
+                    <p>Rich and creamy hot chocolate.</p>
+                </div>
+                 <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Spanish Latte</h3>
+                    <p>Rich and creamy hot chocolate.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Spanish Latte</h3>
+                    <p>Rich and creamy hot chocolate.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">25dh</div>
+                    <h3>Affogato Special</h3>
+                    <p>Rich and creamy hot chocolate.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Affogato normal</h3>
+                    <p>Rich and creamy hot chocolate.</p>
+                </div>
+                <!-- Iced Coffee -->
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">15dh</div>
+                    <h3>Iced Americano</h3>
+                    <p>Chilled Americano coffee.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">18dh</div>
+                    <h3>Iced Coffee Latte</h3>
+                    <p>Chilled coffee with milk.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">19dh</div>
+                    <h3>Iced Cappuccino</h3>
+                    <p>Chilled cappuccino with milk foam.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">22dh</div>
+                    <h3>Iced Latte Macchiato</h3>
+                    <p>Chilled milk with espresso.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">22dh</div>
+                    <h3>Iced Spanish Latte</h3>
+                    <p>Chilled Spanish-style latte.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Iced Tea Citron</h3>
+                    <p>Chilled Spanish-style latte.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Iced Tea peche</h3>
+                    <p>Chilled Spanish-style latte.</p>
+                </div>
+                <!-- Mocktail -->
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">18dh</div>
+                    <h3>Mojito</h3>
+                    <p>Refreshing mint and lime mocktail.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">23dh</div>
+                    <h3>Flavored Mojito</h3>
+                    <p>Mojito with your choice of fruit flavor.</p>
+                </div>
+                <!-- Smoothie -->
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">20dh</div>
+                    <h3>Florida</h3>
+                    <p>Fruit smoothie with tropical flavors.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">22dh</div>
+                    <h3>Exotica</h3>
+                    <p>Exotic fruit smoothie blend.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">24dh</div>
+                    <h3>Berrylan</h3>
+                    <p>Berry smoothie with a mix of fresh berries.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">26dh</div>
+                    <h3>Healthy</h3>
+                    <p>Healthy smoothie with fresh fruits and seeds.</p>
+                </div>
+                <!-- Jus -->
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">6dh</div>
+                    <h3>Citron</h3>
+                    <p>Fresh lemon juice.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">10dh</div>
+                    <h3>Orange</h3>
+                    <p>Fresh orange juice.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">12dh</div>
+                    <h3>Frais</h3>
+                    <p>Fresh juice blend.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">15dh</div>
+                    <h3>L'avocat</h3>
+                    <p>Avocado juice.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">16dh</div>
+                    <h3>Ananas</h3>
+                    <p>Pineapple juice.</p>
+                </div>
+                <div class="menu-item category-visible" data-category="boissons">
+                    <div class="price-tag">19dh</div>
+                    <h3>Mangue</h3>
+                    <p>Mango juice.</p>
+                </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="special-offers" class="special-offers">
+        <div class="container">
+            <div class="offer-content">
+                <h2>Special Offers</h2>
+                <p>Discover our seasonal specialties and promotions</p>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-ice-cream"></i>
+                        </div>
+                        <h3>Happy Hour</h3>
+                        <p>20% off all gelato every day from 3-5pm</p>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3>Birthday Special</h3>
+                        <p>Free scoop on your birthday with valid ID</p>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Loyalty Program</h3>
+                        <p>Buy 10 scoops, get 1 free with our loyalty card</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+                <div class="divider"></div>
+                <p>Follow us on Instagram @gelato_house__</p>
+            </div>
+            <div class="gallery-header">
+                <a href="https://www.instagram.com/gelato_house__/?hl=en" target="_blank" class="instagram-btn">
+                    <i class="fab fa-instagram"></i> View on Instagram
+                </a>
+            </div>
+            <div class="instagram-widget-container">
+                <div class='sk-instagram-feed' data-embed-id='25598732'></div>
+                <script src='https://widgets.sociablekit.com/instagram-feed/widget.js' defer></script>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Address</h3>
+                            <p>Avenue bijaya Rue A<br>TETOUAN</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Opening Hours</h3>
+                            <p>Every Day: 12:00 PM - 1:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Contact</h3>
+                            <p>Phone: +212 717-034039<br>Email: info@gelatohouse.com</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="https://web.facebook.com/reel/1831226574094663/?s=single_unit" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/gelato_house__/?hl=en" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://maps.google.com/?q=Gelato+House,+HMH3%2B6FR,+Tetouan" target="_blank" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Gelato House</h2>
+                    <p>Authentic Italian Gelato</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get special offers and updates</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" aria-label="Subscribe">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gelato House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/instagram-feed.js"></script>
+    <script src="js/auto-cart-buttons.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cart-test.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button id="close-cart" class="close-cart-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-total">
+                <div class="total-line">
+                    <span>Total: <span id="cart-total">0dh</span></span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button id="checkout-btn" class="checkout-btn" disabled>
+                    Checkout <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3>Order Details</h3>
+                <button id="close-checkout" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">Full Name *</label>
+                    <input type="text" id="customer-name" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number *</label>
+                    <input type="tel" id="customer-phone" name="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Order Type *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="orderType" value="pickup" required>
+                            <span>Pickup (In House)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="orderType" value="delivery" required>
+                            <span>Delivery</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="address-group" style="display: none;">
+                    <label for="customer-address">Delivery Address *</label>
+                    <textarea id="customer-address" name="customerAddress" rows="3"></textarea>
+                </div>
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total">
+                        <strong>Total: <span id="checkout-total">0dh</span></strong>
+                    </div>
+                </div>
+                <button type="submit" class="place-order-btn">
+                    <i class="fas fa-whatsapp"></i>
+                    Place Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+</body>
+</html>

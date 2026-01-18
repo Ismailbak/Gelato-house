@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Circular Favicon</title>
+    <style>
+        .favicon-generator {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            display: inline-block;
+        }
+        .favicon-generator img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .preview {
+            margin: 20px;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview">
+        <h3>Original Logo</h3>
+        <img src="img/logo.jpg" width="64" height="64">
+        
+        <h3>Circular Preview (32x32)</h3>
+        <div class="favicon-generator">
+            <img src="img/logo.jpg" alt="Logo">
+        </div>
+        
+        <h3>Generated Circular Favicon</h3>
+        <canvas id="favicon-canvas" width="32" height="32"></canvas>
+        <br>
+        <button onclick="generateFavicon()">Generate Circular Favicon</button>
+        <br>
+        <a id="download-link" style="display:none;">Download Favicon</a>
+    </div>
+
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('favicon-canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = function() {
+                // Clear canvas
+                ctx.clearRect(0, 0, 32, 32);
+                
+                // Create circular clipping path
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(16, 16, 16, 0, Math.PI * 2);
+                ctx.clipPath();
+                
+                // Draw image
+                ctx.drawImage(img, 0, 0, 32, 32);
+                ctx.restore();
+                
+                // Create download link
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.getElementById('download-link');
+                    link.href = url;
+                    link.download = 'favicon.png';
+                    link.style.display = 'inline';
+                    link.textContent = 'Download Circular Favicon (Right-click -> Save As -> favicon.ico)';
+                });
+            };
+            
+            img.src = 'img/logo.jpg';
+        }
+        
+        // Auto-generate on load
+        window.onload = generateFavicon;
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/* Circular Favicon Generator for Gelato House */
+
+/* Create a circular version of the logo using CSS */
+.circular-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: inline-block;
+    border: 2px solid #D4AF37; /* Gold border */
+}
+
+.circular-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* For use in creating favicon */
+.favicon-preview {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: inline-block;
+}
+
+.favicon-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
